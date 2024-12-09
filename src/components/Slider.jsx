@@ -33,7 +33,7 @@ const Slider = () => {
             <FaChevronRight onClick={()=>sliderRight(elementRef.current)} className='hidden md:block text-white text-[40px] absolute mx-8 mt-[155px] right-0 bg-transparent' />
             <div className='flex overflow-x-auto px-16 py-4 scrollbar-hide scroll-smooth ' ref={elementRef}>
                 {movieList.map((item, index) => (
-                    <img src={Image_Base_url + item.backdrop_path}
+                    <img key={index} src={Image_Base_url + item.backdrop_path}
                         className='rounded-lg md:h-[310px] size-full min-w-full object-fit pr-4 hover:border-[4px] border-gray-800 transition-all duration-100 ease-in-out' />
                 ))}
             </div>
